@@ -1,6 +1,6 @@
 "use client";
 
-import { FolderGit2, ExternalLink, Github, Terminal, Sparkles, Home } from "lucide-react";
+import { FolderGit2, ExternalLink, Github, Sparkles, Home, Users, Heart } from "lucide-react";
 
 interface Project {
   title: string;
@@ -25,10 +25,25 @@ const projects: Project[] = [
       "Architected end-to-end LLM workflows by integrating Gemini AI through LangChain with RESTful APIs to automate onboarding and roadmap generation.",
       "Implemented JWT-based authentication and a robust modular architecture, deployed on Vercel and MongoDB Atlas."
     ],
-    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "LangChain", "Gemini AI", "JWT"],
+    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "LangChain", "Gemini AI"],
     githubUrl: "https://github.com/RishaubKumar/Portfolio",
     demoUrl: "https://task-pulse-black.vercel.app/",
     icon: <Sparkles className="w-5 h-5 text-emerald-500" />
+  },
+  {
+    title: "GrowEasy CRM",
+    category: "Full Stack Web",
+    period: "Nov 2024 – Dec 2024",
+    description: "A customer relationship management web application designed for tracking sales leads, managing customer accounts, and visualizing communication workflows.",
+    details: [
+      "Designed and implemented a responsive dashboard interface with real-time stats and leads analytics.",
+      "Built a secure backend API with Node.js and Express to manage customer interactions, accounts, and tasks.",
+      "Integrated database models with MongoDB for fast schema-less data storage and query optimizations."
+    ],
+    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "REST APIs"],
+    githubUrl: "https://github.com/RishaubKumar/GrowEasy-CRM-.git",
+    demoUrl: "https://grow-easy-crm-yca9.vercel.app/",
+    icon: <Users className="w-5 h-5 text-emerald-500" />
   },
   {
     title: "Nestly Room Rental Platform",
@@ -40,73 +55,74 @@ const projects: Project[] = [
       "Configured secure authentication and session management using Passport.js and Express Sessions, safeguarding platform-wide data.",
       "Built interactive views using EJS templates, Node.js controllers, and MongoDB models."
     ],
-    techStack: ["EJS", "JavaScript", "Node.js", "Express.js", "MongoDB", "Passport.js", "Tailwind CSS"],
+    techStack: ["EJS", "JavaScript", "Node.js", "Express.js", "MongoDB", "Passport.js"],
     githubUrl: "https://github.com/RishaubKumar/Portfolio",
     demoUrl: "https://nestly-self.vercel.app/home",
     icon: <Home className="w-5 h-5 text-emerald-500" />
   },
   {
-    title: "IT Ticket Triage AI Agent Pipeline",
-    category: "Hackathon & Gen AI",
-    period: "Deloitte Hacksplosion 2026",
-    description: "An automated AI agent pipeline designed to categorize, triage, and route service desk and IT tickets instantly based on issue descriptions.",
+    title: "RelationshipOS — Epsilon TeXpedition",
+    category: "Hackathon Project",
+    period: "Mar 2026",
+    description: "A modern web application built during the Epsilon TeXpedition Hackathon to help individuals build, nurture, and track professional and personal relationships.",
     details: [
-      "Collaborated within a 5-member team to construct an AI agent pipeline, reaching the Final Round of Deloitte Hacksplosion.",
-      "Cut manual categorization effort by 80% using prompt-engineered classifiers and LLM routing logic.",
-      "Implemented using Python and LangChain for handling incoming message payloads and categorizing priority tags."
+      "Advanced to the Semifinal Round by building and demonstrating a working prototype under strict time limits.",
+      "Engineered user flows for tracking connections, setting touchpoints, and visualizing social spheres.",
+      "Utilized custom frontend UI layouts with responsive design principles optimized for multiple viewports."
     ],
-    techStack: ["Python", "LangChain", "Prompt Engineering", "NLP", "LLM routing"],
-    githubUrl: "https://github.com/RishaubKumar",
-    icon: <Terminal className="w-5 h-5 text-emerald-500" />
+    techStack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "REST APIs"],
+    githubUrl: "https://github.com/RishaubKumar/Portfolio",
+    demoUrl: "https://relationship-os-psi.vercel.app/",
+    icon: <Heart className="w-5 h-5 text-emerald-500" />
   }
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-muted-bg/50 border-y border-border">
+    <section id="projects" className="py-16 bg-muted-bg/50 border-y border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
             Featured Projects
           </h2>
-          <div className="w-12 h-1 bg-primary mx-auto mt-4 rounded-full" />
-          <p className="text-muted mt-4">
+          <div className="w-10 h-0.5 bg-primary mx-auto mt-3 rounded-full" />
+          <p className="text-sm text-muted mt-3">
             A selection of my recent full-stack applications and artificial intelligence integrations.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="flex flex-col h-full rounded-2xl border border-border bg-card shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden glow-card group"
+              className="flex flex-col h-full rounded-xl border border-border bg-card shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group"
             >
               {/* Card Header */}
-              <div className="p-6 pb-4 border-b border-border flex items-start justify-between">
-                <div className="p-2.5 rounded-lg bg-primary/10 border border-primary/20">
+              <div className="p-5 pb-3 border-b border-border flex items-start justify-between">
+                <div className="p-2 rounded-lg bg-primary/10 border border-primary/20">
                   {project.icon}
                 </div>
-                <span className="text-xs font-semibold text-primary uppercase tracking-wider bg-primary/10 px-2 py-0.5 rounded-md">
+                <span className="text-[10px] font-semibold text-primary uppercase tracking-wider bg-primary/10 px-2.5 py-0.5 rounded-md">
                   {project.category}
                 </span>
               </div>
 
               {/* Card Body */}
-              <div className="p-6 flex-grow flex flex-col justify-between">
+              <div className="p-5 flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between text-xs text-muted mb-2 font-mono">
                     <span>{project.period}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-muted mt-2 mb-4 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-muted mt-2 mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
-                  <ul className="text-xs text-muted space-y-2 mb-6 border-t border-border/40 pt-4">
+                  <ul className="text-xs text-muted space-y-1.5 mb-6 border-t border-border/40 pt-4">
                     {project.details.map((detail, idx) => (
                       <li key={idx} className="flex items-start">
                         <span className="text-primary mr-1.5 font-bold">•</span>
@@ -118,11 +134,11 @@ export default function Projects() {
 
                 {/* Tech Stack & Links */}
                 <div>
-                  <div className="flex flex-wrap gap-1.5 mb-6">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="text-[10px] font-medium font-mono bg-muted-bg border border-border px-2 py-0.5 rounded text-foreground/80"
+                        className="text-[9px] font-semibold font-mono bg-muted-bg border border-border px-1.5 py-0.5 rounded text-foreground/80"
                       >
                         {tech}
                       </span>
@@ -136,7 +152,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-xs font-semibold text-foreground/75 hover:text-primary transition-colors gap-1"
                     >
-                      <Github className="w-4 h-4" />
+                      <Github className="w-3.5 h-3.5" />
                       <span>Code</span>
                     </a>
                     {project.demoUrl && (
@@ -146,7 +162,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-xs font-semibold text-primary hover:text-primary-hover transition-colors gap-1 ml-auto"
                       >
-                        <ExternalLink className="w-4 h-4" />
+                        <ExternalLink className="w-3.5 h-3.5" />
                         <span>Live Demo</span>
                       </a>
                     )}

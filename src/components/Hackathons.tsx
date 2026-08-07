@@ -1,12 +1,13 @@
 "use client";
 
-import { Award, Calendar } from "lucide-react";
+import { Award, Calendar, ExternalLink } from "lucide-react";
 
 interface HackathonItem {
   title: string;
   organization: string;
   period: string;
   details: string[];
+  demoUrl?: string;
 }
 
 const hackathons: HackathonItem[] = [
@@ -24,8 +25,10 @@ const hackathons: HackathonItem[] = [
     title: "Semifinalist — Epsilon TeXpedition Hackathon 2026",
     organization: "Epsilon",
     period: "Mar 2026",
+    demoUrl: "https://relationship-os-psi.vercel.app/",
     details: [
-      "Advanced to the Semifinal Round by building and demonstrating a working application within an intensive hackathon environment."
+      "Advanced to the Semifinal Round by building and demonstrating a working application within an intensive hackathon environment.",
+      "Developed RelationshipOS, an application designed to help users track and nurture personal and professional networks."
     ]
   }
 ];
@@ -67,7 +70,7 @@ export default function Hackathons() {
                   {hack.organization}
                 </p>
 
-                <ul className="space-y-2 text-xs text-muted">
+                <ul className="space-y-2 text-xs text-muted mb-4">
                   {hack.details.map((detail, idx) => (
                     <li key={idx} className="flex items-start">
                       <span className="text-primary mr-1.5 font-bold">•</span>
@@ -76,6 +79,20 @@ export default function Hackathons() {
                   ))}
                 </ul>
               </div>
+
+              {hack.demoUrl && (
+                <div className="pt-3 border-t border-border/40 mt-4 flex justify-end">
+                  <a
+                    href={hack.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-xs font-semibold text-primary hover:text-primary-hover gap-1"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>
