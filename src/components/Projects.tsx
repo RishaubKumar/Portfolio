@@ -28,7 +28,7 @@ const projects: Project[] = [
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "LangChain", "Gemini AI"],
     githubUrl: "https://github.com/RishaubKumar/Portfolio",
     demoUrl: "https://task-pulse-black.vercel.app/",
-    icon: <Sparkles className="w-5 h-5 text-emerald-500" />
+    icon: <Sparkles className="w-5 h-5 text-primary" />
   },
   {
     title: "GrowEasy CRM",
@@ -43,7 +43,7 @@ const projects: Project[] = [
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "REST APIs"],
     githubUrl: "https://github.com/RishaubKumar/GrowEasy-CRM-.git",
     demoUrl: "https://grow-easy-crm-yca9.vercel.app/",
-    icon: <Users className="w-5 h-5 text-emerald-500" />
+    icon: <Users className="w-5 h-5 text-primary" />
   },
   {
     title: "Nestly Room Rental Platform",
@@ -58,7 +58,7 @@ const projects: Project[] = [
     techStack: ["EJS", "JavaScript", "Node.js", "Express.js", "MongoDB", "Passport.js"],
     githubUrl: "https://github.com/RishaubKumar/Portfolio",
     demoUrl: "https://nestly-self.vercel.app/home",
-    icon: <Home className="w-5 h-5 text-emerald-500" />
+    icon: <Home className="w-5 h-5 text-primary" />
   },
   {
     title: "RelationshipOS — Epsilon TeXpedition",
@@ -73,7 +73,7 @@ const projects: Project[] = [
     techStack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "REST APIs"],
     githubUrl: "https://github.com/RishaubKumar/Portfolio",
     demoUrl: "https://relationship-os-psi.vercel.app/",
-    icon: <Heart className="w-5 h-5 text-emerald-500" />
+    icon: <Heart className="w-5 h-5 text-primary" />
   }
 ];
 
